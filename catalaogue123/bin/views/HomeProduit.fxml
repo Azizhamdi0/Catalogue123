@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeProduitController">
+   <children>
+      <TableView fx:id="tableProduit" layoutX="76.0" layoutY="371.0" onMouseClicked="#editProduit" prefHeight="200.0" prefWidth="465.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="Model" prefWidth="151.0" text="model" />
+            <TableColumn fx:id="Couleur" prefWidth="102.0" text="couleur" />
+            <TableColumn fx:id="categ" prefWidth="151.0" text="Categ" />
+        </columns>
+      </TableView>
+      <Label layoutX="30.0" layoutY="34.0" prefHeight="26.0" prefWidth="101.0" stylesheets="@../application/application.css" text="Id Vehicule">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Label>
+      <Label layoutX="32.0" layoutY="84.0" prefHeight="26.0" prefWidth="90.0" stylesheets="@../application/application.css" text="Model">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Label>
+      <Label layoutX="32.0" layoutY="141.0" prefHeight="26.0" prefWidth="90.0" stylesheets="@../application/application.css" text="Couleur">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Label>
+      <Label layoutX="36.0" layoutY="201.0" prefHeight="26.0" prefWidth="82.0" stylesheets="@../application/application.css" text="Categorie">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Label>
+      <TextField fx:id="txtId" editable="false" layoutX="154.0" layoutY="30.0" />
+      <TextField fx:id="txtMod" layoutX="154.0" layoutY="80.0" />
+      <TextField fx:id="txtCoul" layoutX="154.0" layoutY="137.0" />
+       <TextField fx:id="txtCat" layoutX="154.0" layoutY="196.0" />
+      <Button fx:id="btnAdd" layoutX="426.0" layoutY="30.0" mnemonicParsing="false" onAction="#addProduit" prefHeight="25.0" prefWidth="60.0" styleClass="buttons" stylesheets="@../application/application.css" text="ADD" />
+      <Button fx:id="btnDelete" layoutX="426.0" layoutY="80.0" mnemonicParsing="false" onAction="#deleteProduit" prefHeight="25.0" prefWidth="60.0" styleClass="buttons" stylesheets="@../application/application.css" text="DELETE" />
+      <Button fx:id="btnUpdate" layoutX="426.0" layoutY="137.0" mnemonicParsing="false" onAction="#updateProduit" styleClass="buttons" stylesheets="@../application/application.css" text="UPDATE" />
+      <Button fx:id="btnClear" layoutX="426.0" layoutY="197.0" mnemonicParsing="false" onAction="#clearProduit" prefHeight="25.0" prefWidth="60.0" styleClass="buttons" stylesheets="@../application/application.css" text="CLEAR" />
+
+   </children>
+</AnchorPane>
